@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    .sun{
+      width: 5rem;
+      height: 5rem;
+      position: absolute;
+      background-color: rgba(255,234,5,0.8);
+      top: 50%;
+      left: 50%;
+      border-radius: 250px;
+    }
+    .umlaufbahn{
+      position: absolute;
+      border-style: solid;
+      border-width: 0.2rem;
+      border-color: rgba(10,120,250,0.2);
+      border-radius: 250px;
+    }
+    .planet{
+      position: relative;
+      border-radius: 250px;
+    }
+    .u_merkur{
+      width: 7rem;
+      height: 7rem;
+      top: -25%;
+      left: -25%;
+    }
+    .merkur{
+      width: 1rem;
+      height: 1rem;
+      top: 0%;
+      left: 15%;
+      background-color: orange;
+    }
+    .u_venus{
+      width: 10rem;
+      height: 10rem;
+      top: -60%;
+      left: -60%;
+    }
+    .venus{
+      width: 1.5rem;
+      height: 1.5rem;
+      top: 5%;
+      left: 10%;
+      background-color: cyan;
+    }
+    .u_saturn{
+      width: 20rem;
+      height: 20rem;
+      top: -150%;
+      left: -130%;
+    }
+    .saturn{
+      width: 3rem;
+      height: 3rem;
+      top: 5%;
+      left: 10%;
+      background-color: red;
+    }
+
+    .saturn-ring{
+      width: 5rem;
+      height: 0.3rem;
+      background-color: darkred;
+      border-radius: 300px;
+      top: 50%;
+      left: -30%;
+      position: relative;
+    }
+
+    .u_pluto{
+      width: 30rem;
+      height: 30rem;
+      top: -250%;
+      left: -250%;
+    }
+    .pluto{
+      width: 3rem;
+      height: 3rem;
+      top: 10%;
+      left: 10%;
+      background-color: purple;
+    }
+
+    .u_moon{
+      width: 4rem;
+      height: 4rem;
+      top: 0%;
+      left: 0%;
+      border-width: 0.1rem;
+      border-color: rgba(10,120,250,0.0);
+    }
+
+    .moon{
+      width: 1rem;
+      height: 1rem;
+      top: 10%;
+      left: 10%;
+      background-color: royalblue;
+    }
+
+    .name{
+      position: relative;
+      top: 50%;
+      left: 50%;
+    }
+
+
+  @-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+  @-webkit-keyframes rv_rotating /* Safari and Chrome */ {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rv_rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+.rotating_merkur {
+  -webkit-animation: rotating 7s linear infinite;
+  -moz-animation: rotating 7s linear infinite;
+  -ms-animation: rotating 7s linear infinite;
+  -o-animation: rotating 7s linear infinite;
+  animation: rotating 7s linear infinite;
+}
+
+.rotating_venus {
+  -webkit-animation: rotating 15s linear infinite;
+  -moz-animation: rotating 15s linear infinite;
+  -ms-animation: rotating 15s linear infinite;
+  -o-animation: rotating 15s linear infinite;
+  animation: rotating 15s linear infinite;
+}
+.rotating_saturn {
+  -webkit-animation: rotating 30s linear infinite;
+  -moz-animation: rotating 30s linear infinite;
+  -ms-animation: rotating 30s linear infinite;
+  -o-animation: rotating 30s linear infinite;
+  animation: rotating 30s linear infinite;
+}
+
+.rotating_saturn_ring {
+  -webkit-animation: rv_rotating 30s linear infinite;
+  -moz-animation: rv_rotating 30s linear infinite;
+  -ms-animation: rv_rotating 30s linear infinite;
+  -o-animation: rv_rotating 30s linear infinite;
+  animation: rv_rotating 30s linear infinite;
+}
+
+.rotating_pluto {
+  -webkit-animation: rotating 10s linear infinite;
+  -moz-animation: rotating 10s linear infinite;
+  -ms-animation: rotating 10s linear infinite;
+  -o-animation: rotating 10s linear infinite;
+  animation: rotating 10s linear infinite;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Planets</title>
+  </head>
+  <body>
+    <div class="sun">
+      <div class="umlaufbahn u_merkur rotating_merkur">
+            <div class="planet merkur"></div>
+      </div>
+      <div class="umlaufbahn u_venus rotating_venus">
+            <div class="planet venus"></div>
+      </div>
+      <div class="umlaufbahn u_saturn rotating_saturn">
+          <div class="planet saturn">
+              <div class="saturn-ring rotating_saturn_ring"></div>
+          </div>
+      </div>
+      <div class="umlaufbahn u_pluto rotating_pluto">
+            <div class="planet pluto">
+              <div class="umlaufbahn u_moon rotating_pluto">
+                <div class="planet moon"></div>
+              </div>
+            </div>
+      </div>
+    </div>
+  </body>
+</html>
